@@ -1,11 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
-    
+    <div class="cabecera">
+        <div class="botones oculto">
+            <button id="show_new">Nuevo Libro</button>
+            <button id="show_lend">Prestar Libro</button>
+            <button id="show_return">Devolver Libro</button>
+        </div>
+        <div class="login">
+            <button type="button" id="logueo">Logueo</button>
+        </div>
+    </div>
+    <div class="lugar">
+        <div class="formularios oculto">
+            <div class="campo">
+                <label for="usuario">Usuario</label>
+                <input type="text" id="usuario" required>
+            </div>
+            <div class="campo">
+                <label for="contraseña">Contraseña</label>
+                <input type="text" id="contraseña" required>
+            </div>
+            <div class="campo">
+                <button id="iniciar">Login</button>
+            </div>
+            <div class="campo">
+                <button id="registrar">registrar</button>
+            </div>
+        </div>
+        <div class="registrarse oculto">
+            <div class="campo">
+                <label for="usuario">Usuario</label>
+                <input type="text" id="usuarios" required>
+            </div>
+            <div class="campo">
+                <label for="contraseña">Contraseña</label>
+                <input type="text" id="contraseñas" required>
+            </div>
+            <div class="campo">
+                <button id="register">Crear</button>
+            </div>
+        </div>
+    </div>
+
+
+
 </body>
+<script src="main.js" type="module"></script>
+
 </html>
