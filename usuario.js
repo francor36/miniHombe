@@ -1,15 +1,25 @@
 export class Users {
-    #usuario; #contraseña; #nCuenta; #nombre; #apellido; #saldo;
+    static contadorCuentas = 0; 
+    #usuario; #contraseña; #idCuenta; #nombre; #apellido; #saldo;
     constructor(usuario, contraseña, nCuenta, nombre, apellido, saldo) {
         this.#usuario = usuario;
         this.#contraseña = contraseña;
-        this.#nCuenta = nCuenta;
+        Users.contadorCuentas++;
+        this.#idCuenta = Users.contadorCuentas;
         this.#nombre = nombre;
         this.#apellido = apellido;
         this.#saldo = saldo;
     }
-    get usuario() {
+    getUsuario() {
         return this.#usuario;
+    }
+
+    getContraseña() {
+        return this.#contraseña;
+    }
+
+    get idCuenta() {
+        return this.#idCuenta;
     }
 
     get nombre() {
@@ -23,7 +33,6 @@ export class Users {
     get saldo() {
         return this.#saldo;
     }
-
     // Métodos set
     set usuario(nuevoUsuario) {
         this.#usuario = nuevoUsuario; // Asigna un nuevo valor al usuario
@@ -34,7 +43,7 @@ export class Users {
     }
 
     set nCuenta(nuevaCuenta) {
-        this.#nCuenta = nuevaCuenta; // Asigna un nuevo valor al número de cuenta
+        this.#idCuenta = nuevaCuenta; // Asigna un nuevo valor al número de cuenta
     }
 
     set nombre(nuevoNombre) {
